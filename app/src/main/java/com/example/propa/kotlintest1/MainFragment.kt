@@ -1,6 +1,7 @@
 package com.example.propa.kotlintest1
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -55,6 +56,9 @@ class MainFragment : Fragment() {
             toast("Mensaje: ${main_editText.text}")
             // mostramos en el TextView lo que introducimos en el EditText
             main_textview.text = main_editText.text
+            val datos = Intent(activity,Main2Activity::class.java)
+            datos.putExtra("key1","valor1")
+            startActivity(datos)
         }
     }
 
